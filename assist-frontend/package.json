@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@goorm-dev/vapor-core": "0.25.2-goormthon-250218-2.1960",
+    "@goorm-dev/vapor-icons": "0.25.2-goormthon-250218-2.1960"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
