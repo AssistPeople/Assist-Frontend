@@ -6,11 +6,11 @@ import { useParams } from "react-router-dom";
 // import { useHouseStore } from "../store/usehousestore";
 
 const categoryData: Record<string, { name: string; icon: string }> = {
-    party: { name: "파티", icon: "/assets/concept1.svg" },
-    view: { name: "뷰 맛집", icon: "/assets/concept2.svg" },
-    social: { name: "인싸모임", icon: "/assets/concept3.svg" },
-    rest: { name: "휴식", icon: "/assets/concept4.svg" },
-    experience: { name: "체험형", icon: "/assets/concept5.svg" },
+    party: { name: "파티 게하", icon: "/assets/concept1.svg" },
+    view: { name: "뷰 맛집 게하", icon: "/assets/concept2.svg" },
+    social: { name: "인싸모임 게하", icon: "/assets/concept3.svg" },
+    rest: { name: "휴식 게하", icon: "/assets/concept4.svg" },
+    experience: { name: "체험형 게하", icon: "/assets/concept5.svg" },
 };
 
 const listData = [
