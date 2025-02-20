@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Style } from "../styles/UI";
 import Header from "../components/layout/Header";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 // import { useHouseStore } from "../store/usehousestore";
 
 const categoryData: Record<string, { name: string; icon: string }> = {
@@ -68,6 +69,14 @@ const ListPage = () => {
     // const { house, setHouse } = useHouseStore();
     const { category } = useParams<{ category: string }>();
 
+    useEffect(() => {
+        document.body.classList.add("no-bottom-padding");
+
+        return () => {
+            document.body.classList.remove("no-bottom-padding");
+        };
+    }, []);
+
     const selectedCategory =
         category && categoryData[category] ? categoryData[category] : { name: "숙소 목록", icon: "" };
 
@@ -77,7 +86,13 @@ const ListPage = () => {
                 prefix="backButton"
                 title={
                     <TitleWrapper>
-                        {selectedCategory.icon && <Icon src={selectedCategory.icon} alt={selectedCategory.name} />}
+                        {selectedCategory.icon && (
+                            <img
+                                style={{ width: "20px", height: "20px" }}
+                                src={selectedCategory.icon}
+                                alt={selectedCategory.name}
+                            />
+                        )}
                         {selectedCategory.name}
                     </TitleWrapper>
                 }
@@ -103,11 +118,6 @@ const TitleWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 6px;
-`;
-
-const Icon = styled.img`
-    width: 20px;
-    height: 20px;
 `;
 
 const ListContainer = styled.div`

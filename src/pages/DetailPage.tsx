@@ -4,7 +4,7 @@ import Header from "../components/layout/Header";
 import { Button, Text } from "@goorm-dev/vapor-core";
 import { LocationIcon, GroupIcon } from "@goorm-dev/vapor-icons";
 import { Style } from "../styles/UI";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Popover } from "@goorm-dev/vapor-core";
 import { CallIcon } from "@goorm-dev/vapor-icons";
 import { AssignmentIcon } from "@goorm-dev/vapor-icons";
@@ -27,6 +27,14 @@ export default function DetailPage() {
         longitude: 126.661234,
         imageUrl: "/assets/image1.png",
     };
+
+    useEffect(() => {
+        document.body.classList.add("no-bottom-padding");
+
+        return () => {
+            document.body.classList.remove("no-bottom-padding");
+        };
+    }, []);
 
     return (
         <Style.Container width="332px" gap="14px">
@@ -159,13 +167,12 @@ const LocationWrapper = styled.div`
 `;
 
 const ButtonBox = styled.div`
-    width: 332px;
+    width: 100%;
+    max-width: 332px;
     display: flex;
     justify-content: space-between;
     gap: 8px;
-    position: relative;
-    bottom: 0;
-    margin-bottom: 20px;
+    margin-top: 12px;
 `;
 
 const TextContainer = styled.div`

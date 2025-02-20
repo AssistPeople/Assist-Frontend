@@ -1,12 +1,29 @@
 import { create } from "zustand";
-import { HouseType } from "../types";
 
-interface HouseState {
-    house: HouseType[];
-    setHouse: (data: HouseType[]) => void;
+interface Tag {
+    tagId: number;
+    tag: string;
 }
 
-export const useHouseStore = create<HouseState>((set) => ({
-    house: [],
-    setHouse: (data) => set({ house: data }),
+interface House {
+    postId: number;
+    title: string;
+    description: string;
+    location: string;
+    recruitment: string;
+    latitude: string;
+    longitude: string;
+    imageUrl: string;
+    concept: string;
+    tagEntities: Tag[];
+}
+
+interface HouseStore {
+    houses: House[];
+    setHouses: (houses: House[]) => void;
+}
+
+export const useHouseStore = create<HouseStore>((set) => ({
+    houses: [],
+    setHouses: (houses) => set({ houses }),
 }));
