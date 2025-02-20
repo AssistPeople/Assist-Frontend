@@ -17,7 +17,7 @@ export const StyleHeader = styled.header`
     min-width: ${theme.size.minWidth};
     left: 50%;
     transform: translateX(-50%);
-    padding: 20px;
+    padding: 30px;
 `;
 
 export const Title = styled.div`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "./theme";
 
 // GDS에 존재하지 않는 스타일 컴포넌트 모음
 type Style = {
@@ -34,6 +35,8 @@ export const Style = {
         gap: ${props => props.gap};
         display: flex;
         flex-direction: column;
+        margin-top: ${theme.size.headerHeight};
+        overflow: auto;
     `,
     FloatBox: styled.div`
         width: 332px;
