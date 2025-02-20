@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import Header from "../components/layout/Header";
 import { Style } from "../styles/UI";
-import { IconButton, Text } from "@goorm-dev/vapor-core";
-import { SendIcon, LocationIcon } from "@goorm-dev/vapor-icons";
+import { IconButton } from "@goorm-dev/vapor-core";
+import { SendIcon } from "@goorm-dev/vapor-icons";
+import ChatInfo from "../components/chat/ChatInfo";
 
 export default function ChatRoomPage() {
     return (
@@ -11,23 +12,7 @@ export default function ChatRoomPage() {
 
             <Style.Container>
                 {/* 게스트하우스 정보 */}
-                <ChatInfoItemWrapper>
-                    <ProfileImage src="/profile.svg" alt="게스트하우스 프로필" />
-
-                    <ProfileInfo>
-                        <Text typography="heading6">필릿 게스트하우스</Text>
-
-                        <Location>
-                            <LocationIcon style={{ color: "var(--orange-500)" }} />
-                            <Text typography="body3" style={{ color: "var(--gray-500)" }}>
-                                함덕 해수욕장
-                            </Text>
-                        </Location>
-                    </ProfileInfo>
-                    <EtcInfo>
-                        <Text typography="body4">열람함</Text>
-                    </EtcInfo>
-                </ChatInfoItemWrapper>
+                <ChatInfo />
                 <Style.Divider />
                 {/* 채팅 내용 */}
             </Style.Container>
