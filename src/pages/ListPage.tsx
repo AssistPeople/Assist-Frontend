@@ -5,13 +5,13 @@ import Header from "../components/layout/Header";
 import { useParams } from "react-router-dom";
 // import { useHouseStore } from "../store/usehousestore";
 
-const categoryData: Record<string, { name: string; icon: string }> = {
-    party: { name: "파티 게하", icon: "/assets/concept1.svg" },
-    view: { name: "뷰 맛집 게하", icon: "/assets/concept2.svg" },
-    social: { name: "인싸모임 게하", icon: "/assets/concept3.svg" },
-    rest: { name: "휴식 게하", icon: "/assets/concept4.svg" },
-    experience: { name: "체험형 게하", icon: "/assets/concept5.svg" },
-};
+// const categoryData: Record<string, { name: string; icon: string }> = {
+//     party: { name: "파티 게하", icon: "/assets/concept1.svg" },
+//     view: { name: "뷰 맛집 게하", icon: "/assets/concept2.svg" },
+//     social: { name: "인싸모임 게하", icon: "/assets/concept3.svg" },
+//     rest: { name: "휴식 게하", icon: "/assets/concept4.svg" },
+//     experience: { name: "체험형 게하", icon: "/assets/concept5.svg" },
+// };
 
 const listData = [
     {
@@ -68,19 +68,20 @@ const ListPage = () => {
     // const { house, setHouse } = useHouseStore();
     const { category } = useParams<{ category: string }>();
 
-    const selectedCategory =
-        category && categoryData[category] ? categoryData[category] : { name: "숙소 목록", icon: "" };
+    // const selectedCategory =
+    //     category && categoryData[category] ? categoryData[category] : { name: "숙소 목록", icon: "" };
 
     return (
         <Style.Container width="332px" gap="14px">
             <Header
                 prefix="backButton"
-                title={
-                    <TitleWrapper>
-                        {selectedCategory.icon && <Icon src={selectedCategory.icon} alt={selectedCategory.name} />}
-                        {selectedCategory.name}
-                    </TitleWrapper>
-                }
+                title={category}
+                // title={
+                //     <TitleWrapper>
+                //         {selectedCategory.icon && <Icon src={selectedCategory.icon} alt={selectedCategory.name} />}
+                //         {selectedCategory.name}
+                //     </TitleWrapper>
+                // }
             />
             <ListContainer>
                 {listData.map((item) => (
@@ -99,16 +100,16 @@ const ListPage = () => {
     );
 };
 
-const TitleWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 6px;
-`;
+// const TitleWrapper = styled.div`
+//     display: flex;
+//     align-items: center;
+//     gap: 6px;
+// `;
 
-const Icon = styled.img`
-    width: 20px;
-    height: 20px;
-`;
+// const Icon = styled.img`
+//     width: 20px;
+//     height: 20px;
+// `;
 
 const ListContainer = styled.div`
     display: flex;

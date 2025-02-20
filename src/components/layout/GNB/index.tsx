@@ -17,13 +17,16 @@ export default function GNB() {
 
     return (
         <Container>
-            {menuItems.map(item => {
+            {menuItems.map((item) => {
                 const isActive = location.pathname === item.path;
 
                 return (
                     <MenuItem key={item.path} isActive={isActive} onClick={() => navigate(item.path)}>
                         <item.icon size="sm" fill={isActive ? "#FF8821" : "#CDCED6"} />
-                        <Text typography="body1" color={isActive ? "#FF8821" : "#CDCED6"}>
+                        {/* <Text typography="body1" color={isActive ? "#FF8821" : "#CDCED6"}>
+                            {item.label}
+                        </Text> */}
+                        <Text typography="body1" style={{ color: isActive ? "var(--orange-500)" : "var(--gray-400)" }}>
                             {item.label}
                         </Text>
                     </MenuItem>

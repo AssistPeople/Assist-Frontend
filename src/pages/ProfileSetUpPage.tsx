@@ -66,7 +66,7 @@ export default function ProfileSetUpPage() {
             </Style.Container>
             <Style.FloatBox>
                 <Button size="xl" shape="fill" stretch color="primary">
-                    <Text typography="heading6" color="semantic">
+                    <Text typography="heading6" style={{ color: "var(--orange-500)" }}>
                         시작하기
                     </Text>
                 </Button>
