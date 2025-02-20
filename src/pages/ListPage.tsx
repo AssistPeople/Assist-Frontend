@@ -16,7 +16,7 @@ const categoryData: Record<string, { name: string; icon: string }> = {
 const listData = [
     {
         id: 1,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["활기찬", "설렘"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -24,7 +24,7 @@ const listData = [
     },
     {
         id: 2,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["설렘", "감성"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -32,7 +32,7 @@ const listData = [
     },
     {
         id: 3,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["힐링", "감성"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -40,7 +40,7 @@ const listData = [
     },
     {
         id: 4,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["잔잔한", "편안한"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -48,7 +48,7 @@ const listData = [
     },
     {
         id: 5,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["감성", "힐링"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -56,7 +56,7 @@ const listData = [
     },
     {
         id: 6,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["힐링", "감성"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",

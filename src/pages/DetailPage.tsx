@@ -9,6 +9,7 @@ import { Popover } from "@goorm-dev/vapor-core";
 import { CallIcon } from "@goorm-dev/vapor-icons";
 import { AssignmentIcon } from "@goorm-dev/vapor-icons";
 import { useParams } from "react-router-dom";
+import TagComponent from "../components/TagComponent";
 
 export default function DetailPage() {
     const { id } = useParams();
@@ -16,7 +17,7 @@ export default function DetailPage() {
     console.log(id);
 
     const place = {
-        tags: ["핫플", "힐링"],
+        tags: ["활기찬", "설렘"],
         title: "필릿 게스트하우스",
         description:
             "🔥 제주도 핫한 게스트하우스 스태프 모집! 🔥제주에서 제일 핫한 게스트하우스에서 같이 즐기면서 일할 스태프를 찾습니다!새로운 사람들과 어울리는 걸 좋아하고, 흥 많은 분들 환영!🎉🌟 모집 대상친화력 넘치는 인싸 기질 가진 분파티 & 헌팅 문화에 거부감 없는 분최소 1개월 이상 가능하신 분🌟 업무 내용체크인/체크아웃 & 손님 응대파티 진행 보조 (BBQ, 술게임, 미팅주선🔥)게스트들과 자연스럽게 어울리기",
@@ -36,11 +37,7 @@ export default function DetailPage() {
             <ContentWrapper>
                 <TagsContainer>
                     {place.tags.map((tag, index) => (
-                        <Tag key={index}>
-                            <Text as="span" typography="body2">
-                                {tag}
-                            </Text>
-                        </Tag>
+                        <TagComponent key={index} tag={tag} />
                     ))}
                 </TagsContainer>
                 <TitleWrapper>
@@ -135,14 +132,6 @@ const ContentWrapper = styled.div`
 const TagsContainer = styled.div`
     display: flex;
     gap: 6px;
-`;
-
-const Tag = styled.span`
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 8px;
-    background: #f5f5f5;
 `;
 
 const TitleWrapper = styled.div`
