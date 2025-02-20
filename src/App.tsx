@@ -6,7 +6,8 @@ import ListPage from "./pages/ListPage";
 import DetailPage from "./pages/DetailPage";
 import ProfileSetUpPage from "./pages/ProfileSetUpPage";
 import ProfilePage from "./pages/ProfilePage";
-import ChatPage from "./pages/ChatPage";
+// import ChatListPage from "./pages/ChatListPage";
+import ChatRoomPage from "./pages/ChatRoomPage";
 
 const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
@@ -15,7 +16,9 @@ const router = createBrowserRouter([
     { path: "/detail/:id", element: <DetailPage /> },
     { path: "/profile-setup", element: <ProfileSetUpPage /> },
     { path: "/profile", element: <ProfilePage /> },
-    { path: "/chats", element: <ChatPage /> },
+    // { path: "/chats", element: <ChatListPage /> },
+    // { path: "/chats/:roomId", element: <ChatRoomPage /> },
+    { path: "/chats", element: <ChatRoomPage /> }, // 시연 영상을 위한 단축 루트
 ]);
 
 function App() {

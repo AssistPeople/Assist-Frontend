@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     overscroll-behavior: none;
     background-color: white;
     margin: 0;
-    padding: 0 30px 120px 30px;
+    padding: 0 30px 80px 30px;
     display: flex;
     align-items: flex-start;
 
