@@ -8,6 +8,8 @@ const HomePage = () => {
             <Link to="/list">리스트 페이지로 이동</Link>
 
             <Link to="/login">로그인 페이지로 이동</Link>
+
+            <Link to="/profile-setup">프로필 등록하러 가기 (임시)</Link>
         </div>
     );
 };

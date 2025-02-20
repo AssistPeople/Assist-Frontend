@@ -4,12 +4,14 @@ import LoginPage from "./pages/LoginPage";
 import GlobalStyle from "./styles/GlobalStyles";
 import ListPage from "./pages/ListPage";
 import DetailPage from "./pages/DetailPage";
+import ProfileSetUpPage from "./pages/ProfileSetUpPage";
 
 const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
     { path: "/login", element: <LoginPage /> },
     { path: "/list", element: <ListPage /> },
     { path: "/detail/:id", element: <DetailPage /> },
+    { path: "/profile-setup", element: <ProfileSetUpPage /> },
 ]);
 
 function App() {
