@@ -16,7 +16,8 @@ export const Style = {
         color: #6c6e7e;
         border: 1px solid #e1e1e8;
         border-radius: 8px;
-        padding: 4px 11px;
+        padding: 8px 24px;
+        font-size: 16px;
         transition: 0.3s;
         &:hover {
             border-color: black;
