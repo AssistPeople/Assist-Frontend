@@ -112,6 +112,7 @@ export const ImageContainer = styled.div`
         width: 100%;
         height: auto;
         object-fit: cover;
+        border-radius: 12px;
     }
 `;
 
