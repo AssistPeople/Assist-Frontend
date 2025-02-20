@@ -2,13 +2,13 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import MapComponent from "../components/MapComponent";
 import Header from "../components/layout/Header";
-import { Text } from "@goorm-dev/vapor-core";
+import { Button, Text } from "@goorm-dev/vapor-core";
 import { LocationIcon, GroupIcon } from "@goorm-dev/vapor-icons";
-import theme from "../styles/theme";
 import { Style } from "../styles/UI";
 import { useState } from "react";
+import { Popover } from "@goorm-dev/vapor-core";
 
-const DetailPage = () => {
+export default function DetailPage() {
     const { id } = useParams();
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -71,9 +71,37 @@ const DetailPage = () => {
                 </LocationWrapper>
                 <MapComponent latitude={place.latitude} longitude={place.longitude} />
             </ContentWrapper>
+            <ButtonBox>
+                <Popover side="top" align="center">
+                    <Popover.Trigger asChild>
+                        <Button size="xl" shape="fill" stretch color="secondary">
+                            <Text typography="heading6" color="black">
+                                전화문의
+                            </Text>
+                        </Button>
+                    </Popover.Trigger>
+                    <Popover.Content style={{ zIndex: 9999 }}>
+                        <button
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 10,
+                                zIndex: 9999,
+                            }}
+                        >
+                            010-1234-5678
+                        </button>
+                    </Popover.Content>
+                </Popover>
+                <Button size="xl" shape="fill" stretch color="warning">
+                    <Text typography="heading6" color="white">
+                        지원하기
+                    </Text>
+                </Button>
+            </ButtonBox>
         </Style.Container>
     );
-};
+}
 
 const ImageContainer = styled.div`
     width: 100%;
@@ -85,7 +113,6 @@ const ImageContainer = styled.div`
         height: auto;
         object-fit: cover;
     }
-    margin-top: ${theme.size.headerHeight};
 `;
 
 const ContentWrapper = styled.div`
@@ -131,4 +158,12 @@ const LocationWrapper = styled.div`
     gap: 4px;
 `;
 
-export default DetailPage;
+const ButtonBox = styled.div`
+    width: 332px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    position: relatvie;
+    bottom: 0;
+    margin-bottom: 20px;
+`;
