@@ -35,4 +35,13 @@ export const Style = {
         display: flex;
         flex-direction: column;
     `,
+    FloatBox: styled.div`
+        width: 332px;
+        display: flex;
+        justify-content: space-between; // float button이 두개일 경우를 위함
+        gap: 8px;
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 20px;
+    `,
 };

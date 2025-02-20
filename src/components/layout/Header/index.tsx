@@ -22,7 +22,12 @@ export default function Header({ prefix, title, onclick }: Props) {
             {prefix ? (
                 prefix === "backButton" ? (
                     <>
-                        <IconButton onClick={onclick || handleBackButtonClick} aria-label="submit" size="md">
+                        <IconButton
+                            onClick={onclick || handleBackButtonClick}
+                            aria-label="submit"
+                            size="md"
+                            color="background-normal"
+                        >
                             <ChevronLeftOutlineIcon />
                         </IconButton>
                     </>
