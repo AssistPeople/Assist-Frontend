@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import GlobalStyle from "./styles/GlobalStyles";
 
 const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
@@ -8,7 +9,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-    return <RouterProvider router={router} />;
+    return (
+        <>
+            <GlobalStyle />
+            <RouterProvider router={router} />
+        </>
+    );
 }
 
 export default App;
