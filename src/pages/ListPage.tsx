@@ -2,6 +2,8 @@ import ListItem from "../components/ListItem";
 import styled from "styled-components";
 import { Style } from "../styles/UI";
 import Header from "../components/layout/Header";
+import theme from "../styles/theme";
+import { useHouseStore } from "../store/usehousestore";
 
 const listData = [
     {
@@ -36,9 +38,28 @@ const listData = [
         location: "함덕해수욕장",
         recruitment: "남자 2명 모집",
     },
+    {
+        id: 5,
+        tags: ["안주맛집", "오션뷰"],
+        title: "필릿 게스트하우스",
+        description: "바다 근처 힙한 게스트 하우스",
+        location: "함덕해수욕장",
+        recruitment: "남자 2명 모집",
+    },
+    {
+        id: 6,
+        tags: ["안주맛집", "오션뷰"],
+        title: "필릿 게스트하우스",
+        description: "바다 근처 힙한 게스트 하우스",
+        location: "함덕해수욕장",
+        recruitment: "남자 2명 모집",
+    },
 ];
 
 const ListPage = () => {
+
+    // const { house, setHouse } = useHouseStore();
+
     return (
         <Style.Container width="332px" gap="14px">
             <Header prefix="backButton" title="대규모 숙소" />
@@ -63,7 +84,8 @@ const ListContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
+    margin-top: ${theme.size.headerHeight};
 `;
 
 export default ListPage;
