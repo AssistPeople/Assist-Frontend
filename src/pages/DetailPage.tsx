@@ -1,19 +1,25 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import MapComponent from "../components/MapComponent";
+import { Style } from "../styles/UI";
+import Header from "../components/layout/Header";
 
 const DetailPage = () => {
     const { id } = useParams();
-    const navigate = useNavigate();
 
-    function handleClick() {
-        navigate(-1);
-    }
+    const place = {
+        title: "필릿 게스트하우스",
+        description: "바다 근처 힙한 게스트 하우스",
+        latitude: 33.542123,
+        longitude: 126.661234,
+    };
 
     return (
-        <div>
-            <h1>상세 페이지</h1>
-            <p>숙소 ID: {id}</p>
-            <button onClick={handleClick}>뒤로가기</button>
-        </div>
+        <Style.Container width="332px" gap="14px">
+            <Header prefix="backButton" title="숙소 상세 정보" />
+            <h1>{place.title}</h1>
+            <p>{place.description}</p>
+            <MapComponent latitude={place.latitude} longitude={place.longitude} />
+        </Style.Container>
     );
 };
 

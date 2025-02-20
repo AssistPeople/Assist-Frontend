@@ -1,12 +1,7 @@
 import ListItem from "../components/ListItem";
 import styled from "styled-components";
-
-const ListContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-`;
+import { Style } from "../styles/UI";
+import Header from "../components/layout/Header";
 
 const listData = [
     {
@@ -45,7 +40,8 @@ const listData = [
 
 const ListPage = () => {
     return (
-        <div>
+        <Style.Container width="332px" gap="14px">
+            <Header prefix="backButton" title="대규모 숙소" />
             <ListContainer>
                 {listData.map((item) => (
                     <ListItem
@@ -59,8 +55,15 @@ const ListPage = () => {
                     />
                 ))}
             </ListContainer>
-        </div>
+        </Style.Container>
     );
 };
+
+const ListContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+`;
 
 export default ListPage;
