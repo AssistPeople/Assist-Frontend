@@ -172,9 +172,7 @@ const ButtonBox = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 8px;
-    position: relative;
-    bottom: 0;
-    margin-bottom: 20px;
+    margin-top: 12px;
 `;
 
 const TextContainer = styled.div`
