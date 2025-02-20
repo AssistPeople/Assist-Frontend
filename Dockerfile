@@ -1,8 +1,9 @@
-FROM krmp-d2hub-idock.9rum.cc/goorm/node:18-vapor
+# Build stage
+FROM krmp-d2hub-idock.9rum.cc/goorm/node:16-vapor
 WORKDIR /usr/src/app
 COPY ./ ./
-RUN yarn install --frozen-lockfile
-RUN yarn build
-RUN yarn global add serve
+RUN npm i
+RUN npm run build
+RUN npm install -g serve
 EXPOSE 5173
-CMD ["npx", "serve", "-s", "dist", "-l", "5173"]
+CMD ["serve", "-s","dist","-l","5173"]
