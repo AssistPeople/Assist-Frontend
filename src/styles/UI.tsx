@@ -6,6 +6,7 @@ type Style = {
     height?: string;
     pointer?: boolean;
     border?: string;
+    gap?: string;
 };
 
 export const Style = {
@@ -26,5 +27,12 @@ export const Style = {
         &:focus {
             border-color: #2a6ff3;
         }
+    `,
+    Container: styled.div<Style>`
+        width: ${props => (props.width ? props.width : "100%")};
+        height: ${props => (props.width ? props.height : "auto")};
+        gap: ${props => props.gap};
+        display: flex;
+        flex-direction: column;
     `,
 };
