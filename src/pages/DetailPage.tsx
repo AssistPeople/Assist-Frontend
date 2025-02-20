@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import MapComponent from "../components/MapComponent";
 import Header from "../components/layout/Header";
@@ -9,7 +8,7 @@ import { useState } from "react";
 import { Popover } from "@goorm-dev/vapor-core";
 
 export default function DetailPage() {
-    const { id } = useParams();
+    // const { id } = useParams();
     const [isExpanded, setIsExpanded] = useState(false);
 
     const place = {
@@ -75,7 +74,7 @@ export default function DetailPage() {
                 <Popover side="top" align="center">
                     <Popover.Trigger asChild>
                         <Button size="xl" shape="fill" stretch color="secondary">
-                            <Text typography="heading6" color="black">
+                            <Text typography="heading6" style={{ color: "var(--gray-950)" }}>
                                 전화문의
                             </Text>
                         </Button>
@@ -94,7 +93,7 @@ export default function DetailPage() {
                     </Popover.Content>
                 </Popover>
                 <Button size="xl" shape="fill" stretch color="warning">
-                    <Text typography="heading6" color="white">
+                    <Text typography="heading6" style={{ color: "var(--gray-000)" }}>
                         지원하기
                     </Text>
                 </Button>
@@ -112,6 +111,7 @@ export const ImageContainer = styled.div`
         width: 100%;
         height: auto;
         object-fit: cover;
+        border-radius: 12px;
     }
 `;
 
