@@ -25,9 +25,10 @@ export default function Header({ prefix, title, onclick }: Props) {
                     <IconButton
                         onClick={onclick || handleBackButtonClick}
                         aria-label="submit"
-                        size="md"
+                        size="lg"
                         color="secondary"
-                        shape="outline"
+                        shape="invisible"
+                        style={{ border: "none" }}
                     >
                         <ChevronLeftOutlineIcon />
                     </IconButton>
