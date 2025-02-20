@@ -49,6 +49,6 @@ export const Style = {
     `,
     Divider: styled.div`
         width: 331px;
-        border: 1px solid #e8e8ee;
+        border: 0.5px solid #e8e8ee;
     `,
 };
