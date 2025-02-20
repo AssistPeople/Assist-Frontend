@@ -1,10 +1,10 @@
-import GNB from "../components/layout/GNB";
 import { styled } from "styled-components";
 import theme from "../styles/theme";
 import { ImageContainer } from "./DetailPage";
 import ConceptNav from "../components/ConceptNav";
 import PopupCarousel from "../components/PopUpCarousel";
 import PopupCarousel2 from "../components/PopUpCarousel2";
+import GNB from "../components/layout/GNB";
 
 const HomePage = () => {
     return (
