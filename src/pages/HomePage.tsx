@@ -3,13 +3,15 @@ import { styled } from "styled-components";
 import theme from "../styles/theme";
 import { ImageContainer } from "./DetailPage";
 import ConceptNav from "../components/ConceptNav";
+import PopupCarousel from "../components/PopUpCarousel";
+import PopupCarousel2 from "../components/PopUpCarousel2";
 
 const HomePage = () => {
     return (
         <>
             <HeaderContainer>
                 <Logo src="/assets/logo.svg" alt="로고" />
-                <ImageContainer style={{ width: 59.37, height: 18.51 }}>
+                <ImageContainer style={{ width: 59, height: 18 }}>
                     <img src="/assets/logo_text.svg" alt="올래스텝" />
                 </ImageContainer>
             </HeaderContainer>
@@ -18,13 +20,11 @@ const HomePage = () => {
                 <CustomTitle>
                     컨셉별 <OrangeText>인기</OrangeText> 게스트하우스
                 </CustomTitle>
-                {/* <Popup /> */}
+                <PopupCarousel />
                 <CustomTitle>
-                    놀멍 일하멍,
-                    <br />
-                    <OrangeText>제주도 떠나볼랜?</OrangeText> 🌴
+                    <OrangeText>취향저격</OrangeText> 게스트하우스 🌴
                 </CustomTitle>
-                {/* <Banner /> */}
+                <PopupCarousel2 />
                 <GNB />
             </ContentsContainer>
         </>
@@ -37,7 +37,7 @@ const HeaderContainer = styled.div`
     justify-content: center;
     height: ${theme.size.headerHeight};
     gap: 4px;
-    margin-bottom: 28px;
+    margin-bottom: 8px;
 `;
 
 const Logo = styled.img`
@@ -46,13 +46,12 @@ const Logo = styled.img`
 `;
 
 const ContentsContainer = styled.div`
-    width: 332px
-    gap: 14px   
-    height: ;
+    display: flex;
+    width: 332px;
+    gap: 14px;
     display: flex;
     flex-direction: column;
     overflow: auto;
-    gap: 28px;
 `;
 
 const CustomTitle = styled.span`
