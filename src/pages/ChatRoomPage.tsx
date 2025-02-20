@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import Header from "../components/layout/Header";
 import { Style } from "../styles/UI";
+import ChatInfo from "../components/chat/ChatInfo";
 import { IconButton } from "@goorm-dev/vapor-core";
 import { SendIcon } from "@goorm-dev/vapor-icons";
-import ChatInfo from "../components/chat/ChatInfo";
 
 export default function ChatRoomPage() {
     const [messages, setMessages] = useState([
