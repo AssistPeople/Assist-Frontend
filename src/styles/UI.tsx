@@ -47,4 +47,8 @@ export const Style = {
         bottom: 0;
         margin-bottom: 20px;
     `,
+    Divider: styled.div`
+        width: 331px;
+        border: 1px solid #e8e8ee;
+    `,
 };
