@@ -34,11 +34,15 @@ const GlobalStyle = createGlobalStyle`
 }
   body {
     width: 393px;
-    height: 100vh;
+    height: 100%;
     overscroll-behavior: none;
     background-color: white;
     margin: 0;
-    padding: 30px;
+    padding: 0 30px 120px 30px;
+    display: flex;
+    align-items: flex-start;
+
+
   }
 
   a {
