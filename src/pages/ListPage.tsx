@@ -6,7 +6,6 @@ const ListContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 20px;
 `;
 
 const listData = [
@@ -50,6 +49,7 @@ const ListPage = () => {
             <ListContainer>
                 {listData.map((item) => (
                     <ListItem
+                        id={item.id}
                         key={item.id}
                         tags={item.tags}
                         title={item.title}

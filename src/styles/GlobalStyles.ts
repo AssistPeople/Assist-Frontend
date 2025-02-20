@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
     overscroll-behavior: none;
     background-color: white;
     margin: 0;
+    padding: 30px;
   }
 
   a {
