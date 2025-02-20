@@ -63,12 +63,14 @@ export default function ProfileSetUpPage() {
                         placeholder="ex) 이전 스텝 경험, 언어 능력 등"
                     />
                 </TextInput>
+            </Style.Container>
+            <Style.FloatBox>
                 <Button size="xl" shape="fill" stretch color="primary">
                     <Text typography="heading6" color="semantic">
                         작성 완료
                     </Text>
                 </Button>
-            </Style.Container>
+            </Style.FloatBox>
         </>
     );
 }
