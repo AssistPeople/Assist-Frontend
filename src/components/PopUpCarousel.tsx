@@ -34,7 +34,7 @@ const slides = [
         title: "액티비티",
         subtitle: "체험형 게스트하우스",
         name: "도란 게스트 하우스",
-        image: "/assets/sample3.png",
+        image: "/assets/sample4.png",
         link: "/detail/4",
     },
     {
@@ -42,7 +42,7 @@ const slides = [
         title: "지친 몸과 마음을 달래주는",
         subtitle: "휴식 게스트하우스",
         name: "데이지 게스트 하우스",
-        image: "/assets/sample3.png",
+        image: "/assets/sample5.png",
         link: "/detail/5",
     },
 ];

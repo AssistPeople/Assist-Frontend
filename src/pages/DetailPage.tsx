@@ -8,10 +8,12 @@ import { useState } from "react";
 import { Popover } from "@goorm-dev/vapor-core";
 import { CallIcon } from "@goorm-dev/vapor-icons";
 import { AssignmentIcon } from "@goorm-dev/vapor-icons";
+import { useParams } from "react-router-dom";
 
 export default function DetailPage() {
-    // const { id } = useParams();
+    const { id } = useParams();
     const [isExpanded, setIsExpanded] = useState(false);
+    console.log(id);
 
     const place = {
         tags: ["핫플", "힐링"],
