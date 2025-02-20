@@ -1,4 +1,4 @@
-FROM krmp-d2hub-idock.9rum.cc/goorm/node:18
+FROM krmp-d2hub-idock.9rum.cc/goorm/node:18-vapor
 WORKDIR /usr/src/app
 COPY ./ ./
 RUN yarn install --frozen-lockfile
