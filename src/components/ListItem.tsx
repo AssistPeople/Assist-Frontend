@@ -61,10 +61,6 @@ const Container = styled.div`
     padding: 16px;
     border: 1px solid #f0f0f5;
     box-sizing: border-box;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
     border-radius: 12px;
     gap: 10px;
     width: 332px;
@@ -74,7 +70,6 @@ const Container = styled.div`
     &:hover {
         background: #f8f8f8;
     }
-
     &:active {
         background: #f0f0f0;
         transform: scale(0.98);
