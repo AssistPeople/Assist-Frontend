@@ -53,7 +53,7 @@ const MapComponent = ({ latitude, longitude }: MapComponentProps) => {
         }
     }, [latitude, longitude]);
 
-    return <div ref={mapRef} style={{ width: "100%", height: "120px", borderRadius: "8px" }} />;
+    return <div ref={mapRef} style={{ width: "100%", height: "210px", borderRadius: "12px" }} />;
 };
 
 export default MapComponent;
