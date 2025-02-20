@@ -2,8 +2,7 @@ import ListItem from "../components/ListItem";
 import styled from "styled-components";
 import { Style } from "../styles/UI";
 import Header from "../components/layout/Header";
-import theme from "../styles/theme";
-import { useHouseStore } from "../store/usehousestore";
+// import { useHouseStore } from "../store/usehousestore";
 
 const listData = [
     {
@@ -57,7 +56,6 @@ const listData = [
 ];
 
 const ListPage = () => {
-
     // const { house, setHouse } = useHouseStore();
 
     return (
@@ -85,7 +83,6 @@ const ListContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin-top: ${theme.size.headerHeight};
 `;
 
 export default ListPage;

@@ -103,7 +103,7 @@ export default function DetailPage() {
     );
 }
 
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
     width: 100%;
     max-height: 300px;
     overflow: hidden;
