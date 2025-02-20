@@ -19,9 +19,6 @@ export default function ProfileSetUpPage() {
                     <TextInput.Label>
                         <Text typography="body1" color="foreground-secondary-on-transparent">
                             MBTI
-                        </Text>{" "}
-                        <Text typography="subtitle2" color="foreground-hint">
-                            * 최대 50자
                         </Text>
                     </TextInput.Label>
 
@@ -33,7 +30,7 @@ export default function ProfileSetUpPage() {
                             한 줄 자기소개 작성
                         </Text>{" "}
                         <Text typography="subtitle2" color="foreground-hint">
-                            * 최대 100자
+                            * 최대 50자
                         </Text>
                     </TextInput.Label>
 
@@ -46,6 +43,9 @@ export default function ProfileSetUpPage() {
                     <TextInput.Label>
                         <Text typography="body1" color="foreground-secondary-on-transparent">
                             지원 동기 작성
+                        </Text>{" "}
+                        <Text typography="subtitle2" color="foreground-hint">
+                            * 최대 100자
                         </Text>
                     </TextInput.Label>
 
@@ -67,7 +67,7 @@ export default function ProfileSetUpPage() {
             <Style.FloatBox>
                 <Button size="xl" shape="fill" stretch color="primary">
                     <Text typography="heading6" color="semantic">
-                        작성 완료
+                        시작하기
                     </Text>
                 </Button>
             </Style.FloatBox>
