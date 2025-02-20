@@ -6,6 +6,8 @@ import { LocationIcon, GroupIcon } from "@goorm-dev/vapor-icons";
 import { Style } from "../styles/UI";
 import { useState } from "react";
 import { Popover } from "@goorm-dev/vapor-core";
+import { CallIcon } from "@goorm-dev/vapor-icons";
+import { AssignmentIcon } from "@goorm-dev/vapor-icons";
 
 export default function DetailPage() {
     // const { id } = useParams();
@@ -33,7 +35,7 @@ export default function DetailPage() {
                 <TagsContainer>
                     {place.tags.map((tag, index) => (
                         <Tag key={index}>
-                            <Text as="span" typography="subtitle2">
+                            <Text as="span" typography="body2">
                                 {tag}
                             </Text>
                         </Tag>
@@ -51,11 +53,11 @@ export default function DetailPage() {
                     </Text>
                 </RecruitmentWrapper>
                 <Description>
-                    <Text as="p" typography="subtitle2">
+                    <Text as="p" typography="body2">
                         {isExpanded ? place.description : `${place.description.slice(0, 60)}... `}
                         {!isExpanded && (
                             <button onClick={() => setIsExpanded(true)}>
-                                <Text as="span" typography="subtitle2" color="foreground-hint">
+                                <Text as="span" typography="body2" color="foreground-hint">
                                     더보기
                                 </Text>
                             </button>
@@ -64,39 +66,46 @@ export default function DetailPage() {
                 </Description>
                 <LocationWrapper>
                     <LocationIcon style={{ width: "20px", color: "var(--orange-500)" }} />
-                    <Text as="span" typography="body2">
+                    <Text as="span" typography="body2" style={{ color: "var(--gray-500)" }}>
                         {place.location}
                     </Text>
                 </LocationWrapper>
                 <MapComponent latitude={place.latitude} longitude={place.longitude} />
             </ContentWrapper>
             <ButtonBox>
-                <Popover side="top" align="center">
-                    <Popover.Trigger asChild>
-                        <Button size="xl" shape="fill" stretch color="secondary">
-                            <Text typography="heading6" style={{ color: "var(--gray-950)" }}>
-                                전화문의
-                            </Text>
-                        </Button>
-                    </Popover.Trigger>
-                    <Popover.Content style={{ zIndex: 9999 }}>
-                        <button
-                            style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                gap: 10,
-                                zIndex: 9999,
-                            }}
-                        >
-                            010-1234-5678
-                        </button>
-                    </Popover.Content>
-                </Popover>
-                <Button size="xl" shape="fill" stretch color="warning">
-                    <Text typography="heading6" style={{ color: "var(--gray-000)" }}>
-                        지원하기
-                    </Text>
-                </Button>
+                <TextContainer>
+                    <Popover side="top" align="center">
+                        <Popover.Trigger asChild>
+                            <StyledButton size="xl" shape="fill" stretch color="secondary">
+                                <CallIcon />
+                                <Text typography="heading6" style={{ color: "var(--gray-950)" }}>
+                                    전화문의
+                                </Text>
+                            </StyledButton>
+                        </Popover.Trigger>
+                        <Popover.Content style={{ zIndex: 9999 }}>
+                            <button
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: 10,
+                                    zIndex: 9999,
+                                }}
+                            >
+                                010-1234-5678
+                            </button>
+                        </Popover.Content>
+                    </Popover>
+                </TextContainer>
+
+                <TextContainer>
+                    <StyledButton size="xl" shape="fill" stretch color="warning">
+                        <AssignmentIcon />
+                        <Text typography="heading6" style={{ color: "var(--gray-000)" }}>
+                            지원하기
+                        </Text>
+                    </StyledButton>
+                </TextContainer>
             </ButtonBox>
         </Style.Container>
     );
@@ -163,7 +172,19 @@ const ButtonBox = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 8px;
-    position: relatvie;
+    position: relative;
     bottom: 0;
     margin-bottom: 20px;
+`;
+
+const TextContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 8px;
+`;
+
+const StyledButton = styled(Button)`
+    width: 100%;
 `;
