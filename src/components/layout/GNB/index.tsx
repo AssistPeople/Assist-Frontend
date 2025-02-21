@@ -1,8 +1,8 @@
 import { Text } from "@goorm-dev/vapor-core";
 import { Container, MenuItem } from "./GNB.styles";
 import { HomeIcon } from "@goorm-dev/vapor-icons";
-import { GroupIcon } from "@goorm-dev/vapor-icons";
-import { UserIcon } from "@goorm-dev/vapor-icons";
+import { AichatOutlineIcon } from "@goorm-dev/vapor-icons";
+import { UserOutlineIcon } from "@goorm-dev/vapor-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function GNB() {
@@ -11,13 +11,13 @@ export default function GNB() {
 
     const menuItems = [
         { icon: HomeIcon, label: "홈", path: "/" },
-        { icon: GroupIcon, label: "채팅", path: "/chats" },
-        { icon: UserIcon, label: "내 정보", path: "/profile" },
+        { icon: AichatOutlineIcon, label: "채팅", path: "/chats" },
+        { icon: UserOutlineIcon, label: "내 정보", path: "/profile" },
     ];
 
     return (
         <Container>
-            {menuItems.map((item) => {
+            {menuItems.map(item => {
                 const isActive = location.pathname === item.path;
 
                 return (
@@ -26,7 +26,7 @@ export default function GNB() {
                         {/* <Text typography="body1" color={isActive ? "#FF8821" : "#CDCED6"}>
                             {item.label}
                         </Text> */}
-                        <Text typography="body1" style={{ color: isActive ? "var(--orange-500)" : "var(--gray-400)" }}>
+                        <Text typography="body2" style={{ color: isActive ? "var(--orange-500)" : "var(--gray-400)" }}>
                             {item.label}
                         </Text>
                     </MenuItem>

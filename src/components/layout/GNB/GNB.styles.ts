@@ -29,7 +29,7 @@ export const MenuItem = styled.div<{ isActive: boolean }>`
     span {
         font-weight: ${props => (props.isActive ? "semibold" : "normal")};
         color: ${props => (props.isActive ? "#FF8821" : "#CDCED6")};
-        height: 20px;
+        height: 30px;
         display: flex;
         justify-content: center;
     }
