@@ -12,9 +12,10 @@ interface ListItemProps {
     description: string;
     location: string;
     recruitment: string;
+    imageUrl: string;
 }
 
-const ListItem = ({ id, tags, title, description, location, recruitment }: ListItemProps) => {
+const ListItem = ({ id, tags, title, description, location, recruitment, imageUrl }: ListItemProps) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -23,7 +24,7 @@ const ListItem = ({ id, tags, title, description, location, recruitment }: ListI
 
     return (
         <Container onClick={handleClick}>
-            <ImagePlaceholder />
+            <ImagePlaceholder imageUrl={imageUrl} />
             <InfoContainer>
                 <TagsContainer>
                     {tags.map((tag, index) => (
@@ -73,14 +74,12 @@ const Container = styled.div`
     }
 `;
 
-const ImagePlaceholder = styled.div`
+const ImagePlaceholder = styled.div<{ imageUrl?: string }>`
     width: 88px;
     height: 88px;
     border-radius: 8px;
-    left: 12px;
-    background: #f0f0f5;
-    top: calc(50% - 88px / 2);
-    border-radius: 8px;
+    background: ${({ imageUrl }) => (imageUrl ? `url(${imageUrl}) center/cover no-repeat` : "#f0f0f5")};
+    overflow: hidden;
 `;
 
 const InfoContainer = styled.div`
