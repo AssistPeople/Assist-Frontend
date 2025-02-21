@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Style } from "../styles/UI";
 import Header from "../components/layout/Header";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 // import { useHouseStore } from "../store/usehousestore";
 
 const categoryData: Record<string, { name: string; icon: string }> = {
@@ -16,7 +17,7 @@ const categoryData: Record<string, { name: string; icon: string }> = {
 const listData = [
     {
         id: 1,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["활기찬", "설렘"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -24,7 +25,7 @@ const listData = [
     },
     {
         id: 2,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["설렘", "감성"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -32,7 +33,7 @@ const listData = [
     },
     {
         id: 3,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["힐링", "감성"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -40,7 +41,7 @@ const listData = [
     },
     {
         id: 4,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["잔잔한", "편안한"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -48,7 +49,7 @@ const listData = [
     },
     {
         id: 5,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["감성", "힐링"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -56,7 +57,7 @@ const listData = [
     },
     {
         id: 6,
-        tags: ["안주맛집", "오션뷰"],
+        tags: ["힐링", "감성"],
         title: "필릿 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
@@ -68,6 +69,14 @@ const ListPage = () => {
     // const { house, setHouse } = useHouseStore();
     const { category } = useParams<{ category: string }>();
 
+    useEffect(() => {
+        document.body.classList.add("no-bottom-padding");
+
+        return () => {
+            document.body.classList.remove("no-bottom-padding");
+        };
+    }, []);
+
     const selectedCategory =
         category && categoryData[category] ? categoryData[category] : { name: "숙소 목록", icon: "" };
 
@@ -77,7 +86,13 @@ const ListPage = () => {
                 prefix="backButton"
                 title={
                     <TitleWrapper>
-                        {selectedCategory.icon && <Icon src={selectedCategory.icon} alt={selectedCategory.name} />}
+                        {selectedCategory.icon && (
+                            <img
+                                style={{ width: "20px", height: "20px" }}
+                                src={selectedCategory.icon}
+                                alt={selectedCategory.name}
+                            />
+                        )}
                         {selectedCategory.name}
                     </TitleWrapper>
                 }
@@ -103,11 +118,6 @@ const TitleWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 6px;
-`;
-
-const Icon = styled.img`
-    width: 20px;
-    height: 20px;
 `;
 
 const ListContainer = styled.div`
