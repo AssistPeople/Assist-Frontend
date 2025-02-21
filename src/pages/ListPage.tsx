@@ -17,51 +17,57 @@ const categoryData: Record<string, { name: string; icon: string }> = {
 const listData = [
     {
         id: 1,
-        tags: ["활기찬", "설렘"],
-        title: "필릿 게스트하우스",
+        tags: ["활기찬", "힐링"],
+        title: "결 게스트하우스",
         description: "바다 근처 힙한 게스트 하우스",
         location: "함덕해수욕장",
         recruitment: "남자 2명 모집",
+        imageUrl: "/assets/sample5.png",
     },
     {
         id: 2,
-        tags: ["설렘", "감성"],
-        title: "필릿 게스트하우스",
-        description: "바다 근처 힙한 게스트 하우스",
-        location: "함덕해수욕장",
-        recruitment: "남자 2명 모집",
+        tags: ["활기찬", "설렘", "힐링"],
+        title: "PADO 게스트하우스",
+        description: "대규모 헌팅 파티 게스트 하우스",
+        location: "애월",
+        recruitment: "남여 각 1명씩",
+        imageUrl: "/assets/sample4.png",
     },
     {
         id: 3,
-        tags: ["힐링", "감성"],
-        title: "필릿 게스트하우스",
-        description: "바다 근처 힙한 게스트 하우스",
-        location: "함덕해수욕장",
-        recruitment: "남자 2명 모집",
+        tags: ["감성"],
+        title: "<오늘> 게스트하우스",
+        description: "우리집 같은 편안함",
+        location: "김녕 해수욕장",
+        recruitment: "여자 1명 모집",
+        imageUrl: "/assets/sample3.png",
     },
     {
         id: 4,
-        tags: ["잔잔한", "편안한"],
-        title: "필릿 게스트하우스",
-        description: "바다 근처 힙한 게스트 하우스",
-        location: "함덕해수욕장",
-        recruitment: "남자 2명 모집",
+        tags: ["설렘", "활기찬"],
+        title: "구름 게스트하우스",
+        description: "설렘 가득한 구름 게스트 하우스!!!",
+        location: "중문",
+        recruitment: "여자 1명 모집",
+        imageUrl: "/assets/sample2.png",
     },
     {
         id: 5,
-        tags: ["감성", "힐링"],
-        title: "필릿 게스트하우스",
-        description: "바다 근처 힙한 게스트 하우스",
-        location: "함덕해수욕장",
-        recruitment: "남자 2명 모집",
+        tags: ["편안한", "잔잔한"],
+        title: "Coco 게스트하우스",
+        description: "제주도에서 가장 조용한 게하",
+        location: "제주시청",
+        recruitment: "남자 1명 모집",
+        imageUrl: "/assets/sample1.png",
     },
     {
         id: 6,
-        tags: ["힐링", "감성"],
-        title: "필릿 게스트하우스",
-        description: "바다 근처 힙한 게스트 하우스",
-        location: "함덕해수욕장",
-        recruitment: "남자 2명 모집",
+        tags: ["힐링", "편안한", "감성"],
+        title: "하루 게스트하우스",
+        description: "여성전용 힐링 게스트 하우스",
+        location: "남원읍",
+        recruitment: "여자 2명 모집",
+        imageUrl: "/assets/sample5.png",
     },
 ];
 
@@ -107,6 +113,7 @@ const ListPage = () => {
                         description={item.description}
                         location={item.location}
                         recruitment={item.recruitment}
+                        imageUrl={item.imageUrl}
                     />
                 ))}
             </ListContainer>
