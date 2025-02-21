@@ -58,15 +58,16 @@ const PopupCarousel = () => {
                         <Slide>
                             <img src={slide.image} alt={slide.title} />
                             <Overlay>
-                                <Text typography="subtitle2" style={{ color: "var(--gray-000)" }}>
-                                    {slide.title}
-                                </Text>
-                                <Text typography="body2" style={{ color: "var(--gray-000)" }}>
-                                    {slide.subtitle}
-                                </Text>
-                                <Text typography="heading5" style={{ color: "var(--gray-000)" }}>
-                                    ‘{slide.name}’
-                                </Text>
+                                <TitleWrapper>
+                                    <Text typography="heading5" style={{ color: "var(--gray-000)", fontWeight: 500 }}>
+                                        {slide.title}
+                                    </Text>
+                                    <Text typography="heading5" style={{ color: "var(--gray-000)", fontWeight: 500 }}>
+                                        {slide.subtitle}
+                                    </Text>
+                                </TitleWrapper>
+
+                                <CustomName style={{ color: "var(--gray-000)" }}>‘{slide.name}’</CustomName>
                             </Overlay>
                         </Slide>
                     </SwiperSlide>
@@ -105,6 +106,22 @@ const Overlay = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4px;
+`;
+
+const TitleWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+`;
+
+const CustomName = styled.p`
+    color: var(--white, #fff);
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 11px;
 `;
 
 export default PopupCarousel;

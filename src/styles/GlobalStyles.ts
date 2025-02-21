@@ -74,6 +74,10 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     background: none;
   }
+
+  .no-bottom-padding {
+    padding: 0 30px 14px 30px !important;
+  }  
 `;
 
 export default GlobalStyle;

@@ -3,6 +3,7 @@ import { Text } from "@goorm-dev/vapor-core";
 import { LocationIcon } from "@goorm-dev/vapor-icons";
 import { GroupIcon } from "@goorm-dev/vapor-icons";
 import { useNavigate } from "react-router-dom";
+import TagComponent from "./TagComponent";
 
 interface ListItemProps {
     id: number;
@@ -26,11 +27,7 @@ const ListItem = ({ id, tags, title, description, location, recruitment }: ListI
             <InfoContainer>
                 <TagsContainer>
                     {tags.map((tag, index) => (
-                        <Tag key={index}>
-                            <Text as="h2" style={{ width: "100%" }} typography="subtitle2">
-                                {tag}
-                            </Text>
-                        </Tag>
+                        <TagComponent key={index} tag={tag} />
                     ))}
                 </TagsContainer>
                 <Text as="h2" style={{ width: "100%" }} typography="heading5">
@@ -95,14 +92,6 @@ const InfoContainer = styled.div`
 const TagsContainer = styled.div`
     display: flex;
     gap: 6px;
-`;
-
-const Tag = styled.span`
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 8px;
-    background: #f5f5f5;
 `;
 
 const LocationWrapper = styled.div`

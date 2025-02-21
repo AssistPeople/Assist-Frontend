@@ -8,7 +8,7 @@ const slides = [
     {
         id: 1,
         title: "잉 게스트하우스",
-        subtitle: "아름다운 자연속에서 힐링",
+        subtitle: "아름다운\n자연속에서 힐링",
         name: "잉 게스트하우스",
         image: "/assets/sample5.png",
         link: "/detail/5",
@@ -16,7 +16,7 @@ const slides = [
     {
         id: 2,
         title: "도피 게스트하우스",
-        subtitle: "파워 E들의 모임 시끌벅적 도파민 충전",
+        subtitle: "파워 E들의\n시끌벅적\n도파민 충전",
         name: "도피 게스트하우스",
         image: "/assets/sample4.png",
         link: "/detail/4",
@@ -24,7 +24,7 @@ const slides = [
     {
         id: 3,
         title: "<3 게스트하우스",
-        subtitle: "나홀로 조용히 여유롭게 힐링하기",
+        subtitle: "나홀로 조용히 여유롭게\n힐링하기",
         name: "<3 게스트하우스",
         image: "/assets/sample3.png",
         link: "/detail/3",
@@ -32,7 +32,7 @@ const slides = [
     {
         id: 4,
         title: "DO 게스트하우스",
-        subtitle: "한 달 동안 제주가",
+        subtitle: "한 달 동안,\n제주가\n나의 집이 된다",
         name: "DO 게스트하우스",
         image: "/assets/sample2.png",
         link: "/detail/2",
@@ -54,7 +54,12 @@ const PopupCarousel2 = () => {
                                     {slide.title}
                                 </Text>
                                 <Text typography="heading5" style={{ color: "var(--gray-000)" }}>
-                                    {slide.subtitle}
+                                    {slide.subtitle.split("\n").map((line, index) => (
+                                        <span key={index}>
+                                            {line}
+                                            <br />
+                                        </span>
+                                    ))}
                                 </Text>
                             </Overlay>
                             <PlusOverlay>
