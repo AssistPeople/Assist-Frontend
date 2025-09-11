@@ -1,5 +1,7 @@
 # 제 13회 kakao x goorm 9oormthon, 최우수상
 
+👉🏻 현재는 [올래스텝](https://github.com/OlleStaff/OlleStaff-web "올래스텝") 에서 추가 기능 개발 진행중이에요!
+
 
 ![Image](https://github.com/user-attachments/assets/e3e41b8e-7083-4008-a51e-07a6aa163db8)
 
